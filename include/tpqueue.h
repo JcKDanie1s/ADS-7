@@ -4,21 +4,21 @@
 
 template<typename T>
 class TPQueue {
-  // реализация шаблона очереди с приоритетом на связанном списке
-  struct ITEM {
-    T data;
-    ITEM *next;
-  };
+// реализация шаблона очереди с приоритетом на связанном списке
+struct ITEM {
+T data;
+ITEM *next;
+};
 
- private:
-  ITEM *head;
-  ITEM *tail;
-  ITEM *create(T data) {
-    ITEM *t = new ITEM;
-    t->data = data;
-    t->next = nullptr;
-    return t;
-  }
+private:
+ITEM *head;
+ITEM *tail;
+ITEM *create(T data) {
+ITEM *t = new ITEM;
+t->data = data;
+t->next = nullptr;
+return t;
+}
 
 public:
 TPQueue() :head(nullptr), tail(nullptr) {}
